@@ -1,0 +1,83 @@
+//
+//  PrefixHeader.pch
+//  AgingWeb
+//
+//  Created by qyhc on 17/8/28.
+//  Copyright © 2017年 com.qykj. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
+
+
+#import <SVProgressHUD.h>
+
+#import <MJRefresh.h>
+
+#import <Masonry/Masonry.h>
+
+#import <UIImageView+WebCache.h>
+
+#import "NetworkingManager.h"
+
+#import "Tool.h"
+
+#import "URL.h"
+
+
+
+//Distance
+#define Common_Distance_ScreenWidth [UIScreen mainScreen].bounds.size.width  //屏幕的宽
+
+#define Common_Distance_ScreenHeight [UIScreen mainScreen].bounds.size.height  //屏幕的高
+
+#define Common_Distance_Space 8
+
+#define Common_Distance_NavigationHeight 64
+
+#define Common_Distance_TabHeight 49
+
+
+
+//Tool
+#define Tool_GetWidthWithView(x) CGRectGetWidth(x.frame)
+
+#define Tool_GetHeightWithView(x) CGRectGetHeight(x.frame)
+
+#define Tool_GetMaxYWithView(x) CGRectGetMaxY(x.frame)
+
+#define Tool_GetMaxXWithView(x) CGRectGetMaxX(x.frame)
+
+#define Tool_Format(x) [NSString stringWithFormat:@"%@",x]
+
+
+//Color
+#define RGB(x,y,z) [UIColor colorWithRed:x/255.0f green:y/255.0f blue:z/255.0f alpha:1]
+
+#define Common_system_Black RGB(90,90,90)
+
+#define Common_system_Gray RGB(153,153,153)
+
+#define Common_system_Green RGB(141,220,214)
+
+#define Common_system_Blus RGB(70,169,255)
+
+#define GrayLine RGB(221,221,221)
+
+
+#pragma mark - Debug
+
+#if DEBUG
+
+#define NSLog(FORMAT, ...) fprintf(stderr,"\nfunction:%s\n line:%d\n content:%s\n", __FUNCTION__, __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+
+#else
+
+#define NSLog(FORMAT, ...) nil
+
+#endif

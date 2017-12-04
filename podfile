@@ -1,0 +1,14 @@
+platform:ios,'8.0'
+
+target ‘AgingWeb’ do
+
+pod 'Masonry', '~> 1.0.2'
+pod 'MJRefresh', '~> 3.1.12'
+pod 'MJExtension'
+pod 'AFNetworking', '~> 3.1.0'
+pod 'SVProgressHUD', '~> 2.0.4'
+pod 'SDCycleScrollView','~> 1.64'
+pod 'IQKeyboardManager'
+pod 'TZImagePickerController'
+
+end
